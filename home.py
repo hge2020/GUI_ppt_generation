@@ -207,9 +207,8 @@ def GenBible(prs_name, save_name, vol, chap, start, end):
     prs.save(save_name)
 
 
-"""
-왜 파일분리 안되는데
-"""
+
+#왜 파일분리 안되는데
 
 
 import streamlit as st
