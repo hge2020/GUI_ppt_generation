@@ -1,6 +1,3 @@
-import collections 
-import collections.abc
-from urllib import request
 from pptx import Presentation
 from pptx.enum.dml import MSO_THEME_COLOR
 from bs4 import BeautifulSoup
@@ -43,7 +40,10 @@ def GenLyrics(prs_name, save_name, title_t, text):
         title_slide_layout = prs.slide_layouts[5]
         slide = prs.slides.add_slide(title_slide_layout)
         title = slide.shapes.title
-        title.text = lines[i]+"\n"+lines[i+1]
+        if i+1 < len(lines):
+            title.text = lines[i]+"\n"+lines[i+1]
+        else:
+            title.text = lines[i]
     prs.save(save_name)
 
 
