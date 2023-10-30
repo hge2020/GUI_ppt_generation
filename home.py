@@ -216,10 +216,10 @@ import streamlit as st
 import json
 # import logic
 
-st.set_page_config(
-    page_title="home",
-    page_icon="📔",
-)
+# st.set_page_config(
+#     page_title="home",
+#     page_icon="📔",
+# )
 
 with open('data.json') as f:
     data = json.load(f)
