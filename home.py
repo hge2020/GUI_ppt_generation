@@ -268,18 +268,18 @@ if not len(data) ==1:
                     startnm = "template.pptx"
                 else:
                     startnm = filenm+".pptx"
-                    logic.GenAd(startnm, filenm+".pptx", "")
+                    GenAd(startnm, filenm+".pptx", "")
                 if value["func"]=="GenLyrics":
-                    logic.GenLyrics(startnm, filenm+".pptx", value["title"], value["txt"])
+                    GenLyrics(startnm, filenm+".pptx", value["title"], value["txt"])
                     first = False
                 elif value["func"]=="GenBible":
-                    logic.GenBible(startnm, filenm+".pptx", value["vol"], value["chap"], value["start"], value["end"])
+                    GenBible(startnm, filenm+".pptx", value["vol"], value["chap"], value["start"], value["end"])
                     first = False
                 elif value["func"]=="GenAd":
-                    logic.GenAd(startnm, filenm+".pptx", value["txt"])
+                    GenAd(startnm, filenm+".pptx", value["txt"])
                     first = False
                 elif value["func"]=="GenAd_m":
-                    logic.GenAd_m(startnm, filenm+".pptx", value["txt"])
+                    GenAd_m(startnm, filenm+".pptx", value["txt"])
                     first = False
                 
         st.write("생성이 완료되었습니다!")
